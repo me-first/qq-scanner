@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/bundle.js"></script>
+    <title>QR-code</title>
+
+</head>
+<body>
+    <section class="qr-generator">
+        <h1>Make your Own QR-Code</h1>
+
+        <form action="#" id="qr-generator-form">
+            <input type="text" placeholder="Name" name="personName" id="Person_name">
+            <input type="password" placeholder="Password" id="Person_password" autocomplete="true">
+            <textarea placeholder="Secret Information.." maxlength="100" name="information" id="Person_message" cols="30" rows="10"></textarea>
+            <button type="submit" id="generate-btn">Generate</button>
+        </form>
+    <p>Generated QR-CODE will be here &#8595;</p>
+        <canvas id="qr-canvas"></canvas>    
+    </section>
+
+    <section class="qr-scanner">
+        <h1>Scan QR code</h1>
+
+        <div class="camera">
+            <video id="video">Video stream not available.</video>
+        </div>
+        <button id="startbutton">Take photo</button>
+        <!-- <button disabled id="flip-btn">Switch Cam</button> -->
+
+
+        <canvas class="d-none" id="canvas-capture"></canvas>
+
+        <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box.">
+        </div>
+        <p >Your decoded information goes here!</p>
+        <p class="output-information"></p>
+    </section>
+<footer>
+   <p> Made with <span style="color: red; font-size: 20px;"> &#9829;</span> by <span>  Ajju yaduvanshi</span></p>
+   
+</footer>
+</body>
+</html>
